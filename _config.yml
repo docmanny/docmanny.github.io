@@ -1,5 +1,8 @@
 theme: jekyll-theme-slate
 
+gems:
+  - jekyll-seo-tag
+  - jekyll-paginate
 title: Juan Manuel Vazquez
 description: Human Genetics Graduate Student at the University of Chicago
 
