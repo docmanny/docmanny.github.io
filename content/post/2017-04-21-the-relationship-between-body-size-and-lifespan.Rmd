@@ -13,6 +13,8 @@ tags:
 header:
   caption: ''
   image: ''
+output:
+  workflowr::wflow_html()
 ---
 
 
