@@ -4,15 +4,23 @@
     
     <url>
     
-      <loc>/2018/09/27/blogdown-hugo-on-github-pages/</loc>
-      <lastmod>2018-09-27T00:00:00+00:00</lastmod>
+      <loc>https://vazquez.bio/2018/09/27/blogdown-hugo-on-github-pages/</loc>
+      <lastmod>2018-09-27T15:57:34-05:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>/2018/09/26/favorite-graphs/</loc>
+      <loc>https://vazquez.bio/2018/09/26/favorite-graphs/</loc>
+      <lastmod>2018-09-27T15:57:34-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://vazquez.bio/publication/zombie-lif-gene-elephant/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
     </url>
     
@@ -20,7 +28,15 @@
     
     <url>
     
-      <loc>/publication/zombie-lif-gene-elephant/</loc>
+      <loc>https://vazquez.bio/2017/04/21/relationship-body-size-lifespan/</loc>
+      <lastmod>2018-09-27T15:57:34-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://vazquez.bio/post/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
     </url>
     
@@ -28,7 +44,7 @@
     
     <url>
     
-      <loc>/privacy/</loc>
+      <loc>https://vazquez.bio/publication/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
     </url>
     
@@ -36,7 +52,7 @@
     
     <url>
     
-      <loc>/2017/04/21/relationship-body-size-lifespan/</loc>
+      <loc>https://vazquez.bio/talk/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
     </url>
     
@@ -44,7 +60,7 @@
     
     <url>
     
-      <loc>/talk/example-talk/</loc>
+      <loc>https://vazquez.bio/project/petos-paradox/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
     </url>
     
@@ -52,47 +68,7 @@
     
     <url>
     
-      <loc>/post/</loc>
-      <lastmod>2018-09-27T10:38:12-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/publication/</loc>
-      <lastmod>2018-09-27T10:38:12-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/talk/</loc>
-      <lastmod>2018-09-27T10:38:12-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/project/petos-paradox/</loc>
-      <lastmod>2018-09-27T10:38:12-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/2016/04/20/academic-the-website-designer-for-hugo/</loc>
-      <lastmod>2018-09-27T10:38:12-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/publication_types/2/</loc>
+      <loc>https://vazquez.bio/publication_types/2/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -101,7 +77,60 @@
     
     <url>
     
-      <loc>/tags/academic/</loc>
+      <loc>https://vazquez.bio/tags/blogdown/</loc>
+      <lastmod>2018-09-27T15:57:34-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://vazquez.bio/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://vazquez.bio/tags/datainmotion/</loc>
+      <lastmod>2018-09-27T15:57:34-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://vazquez.bio/categories/datainmotion/</loc>
+      <lastmod>2018-09-27T15:57:34-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://vazquez.bio/categories/how-to/</loc>
+      <lastmod>2018-09-27T15:57:34-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://vazquez.bio/tags/hugo/</loc>
+      <lastmod>2018-09-27T15:57:34-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://vazquez.bio/tags/lif/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -110,24 +139,7 @@
     
     <url>
     
-      <loc>/tags/blogdown/</loc>
-      <lastmod>2018-09-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/categories/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/datainmotion/</loc>
+      <loc>https://vazquez.bio/tags/petos-paradox/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -136,7 +148,16 @@
     
     <url>
     
-      <loc>/categories/datainmotion/</loc>
+      <loc>https://vazquez.bio/tags/petosparadox/</loc>
+      <lastmod>2018-09-27T15:57:34-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://vazquez.bio/tags/petos-paradox/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -145,25 +166,7 @@
     
     <url>
     
-      <loc>/categories/how-to/</loc>
-      <lastmod>2018-09-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/hugo/</loc>
-      <lastmod>2018-09-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/lif/</loc>
+      <loc>https://vazquez.bio/project/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -172,7 +175,7 @@
     
     <url>
     
-      <loc>/tags/petos-paradox/</loc>
+      <loc>https://vazquez.bio/publication_types/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -181,7 +184,34 @@
     
     <url>
     
-      <loc>/tags/petosparadox/</loc>
+      <loc>https://vazquez.bio/tags/r/</loc>
+      <lastmod>2018-09-27T15:57:34-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://vazquez.bio/categories/r/</loc>
+      <lastmod>2018-09-27T15:57:34-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://vazquez.bio/tags/r-markdown/</loc>
+      <lastmod>2018-09-27T15:57:34-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://vazquez.bio/slides/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -190,7 +220,24 @@
     
     <url>
     
-      <loc>/tags/petos-paradox/</loc>
+      <loc>https://vazquez.bio/slides/example-slides/</loc>
+      <lastmod>2018-09-27T10:38:12-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://vazquez.bio/tags/</loc>
+      <lastmod>2018-09-27T15:57:34-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://vazquez.bio/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -199,7 +246,7 @@
     
     <url>
     
-      <loc>/project/</loc>
+      <loc>https://vazquez.bio/tags/apoptosis/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -208,7 +255,7 @@
     
     <url>
     
-      <loc>/publication_types/</loc>
+      <loc>https://vazquez.bio/tags/cancer/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -217,16 +264,7 @@
     
     <url>
     
-      <loc>/tags/r/</loc>
-      <lastmod>2018-09-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/categories/r/</loc>
+      <loc>https://vazquez.bio/tags/elephant/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
       <priority>0</priority>
     </url>
@@ -235,8 +273,8 @@
     
     <url>
     
-      <loc>/tags/r-markdown/</loc>
-      <lastmod>2018-09-27T00:00:00+00:00</lastmod>
+      <loc>https://vazquez.bio/tags/github/</loc>
+      <lastmod>2018-09-27T15:57:34-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -244,8 +282,8 @@
     
     <url>
     
-      <loc>/slides/</loc>
-      <lastmod>2018-09-27T10:38:12-05:00</lastmod>
+      <loc>https://vazquez.bio/tags/plot/</loc>
+      <lastmod>2018-09-27T15:57:34-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -253,78 +291,7 @@
     
     <url>
     
-      <loc>/slides/example-slides/</loc>
-      <lastmod>2018-09-27T10:38:12-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/</loc>
-      <lastmod>2018-09-27T10:38:12-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/</loc>
-      <lastmod>2018-09-27T10:38:12-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/apoptosis/</loc>
-      <lastmod>2018-09-27T10:38:12-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/cancer/</loc>
-      <lastmod>2018-09-27T10:38:12-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/elephant/</loc>
-      <lastmod>2018-09-27T10:38:12-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/github/</loc>
-      <lastmod>2018-09-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/plot/</loc>
-      <lastmod>2018-09-27T10:38:12-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/refunctionalized-pseudogene/</loc>
+      <loc>https://vazquez.bio/tags/refunctionalized-pseudogene/</loc>
       <lastmod>2018-09-27T10:38:12-05:00</lastmod>
       <priority>0</priority>
     </url>

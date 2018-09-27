@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Vazquez.Bio</title>
-    <link>/categories/</link>
+    <link>https://vazquez.bio/categories/</link>
     <description>Recent content in Categories on Vazquez.Bio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Juan Manuel Vazquez</copyright>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vazquez.bio/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>DataInMotion</title>
-      <link>/categories/datainmotion/</link>
+      <link>https://vazquez.bio/categories/datainmotion/</link>
       <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/datainmotion/</guid>
+      <guid>https://vazquez.bio/categories/datainmotion/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How-To</title>
-      <link>/categories/how-to/</link>
+      <link>https://vazquez.bio/categories/how-to/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/how-to/</guid>
+      <guid>https://vazquez.bio/categories/how-to/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>/categories/r/</link>
+      <link>https://vazquez.bio/categories/r/</link>
       <pubDate>Fri, 21 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/categories/r/</guid>
+      <guid>https://vazquez.bio/categories/r/</guid>
       <description></description>
     </item>
     

@@ -2,157 +2,148 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Vazquez.Bio</title>
-    <link>/tags/</link>
+    <link>https://vazquez.bio/tags/</link>
     <description>Recent content in Tags on Vazquez.Bio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Juan Manuel Vazquez</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 27 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vazquez.bio/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Academic</title>
-      <link>/tags/academic/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0500</pubDate>
-      
-      <guid>/tags/academic/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Blogdown</title>
-      <link>/tags/blogdown/</link>
+      <link>https://vazquez.bio/tags/blogdown/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/blogdown/</guid>
+      <guid>https://vazquez.bio/tags/blogdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DataInMotion</title>
-      <link>/tags/datainmotion/</link>
+      <link>https://vazquez.bio/tags/datainmotion/</link>
       <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/datainmotion/</guid>
+      <guid>https://vazquez.bio/tags/datainmotion/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>/tags/hugo/</link>
+      <link>https://vazquez.bio/tags/hugo/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/hugo/</guid>
+      <guid>https://vazquez.bio/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LIF</title>
-      <link>/tags/lif/</link>
+      <link>https://vazquez.bio/tags/lif/</link>
       <pubDate>Tue, 14 Aug 2018 00:00:00 -0500</pubDate>
       
-      <guid>/tags/lif/</guid>
+      <guid>https://vazquez.bio/tags/lif/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Petos-paradox</title>
-      <link>/tags/petos-paradox/</link>
+      <link>https://vazquez.bio/tags/petos-paradox/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0500</pubDate>
       
-      <guid>/tags/petos-paradox/</guid>
+      <guid>https://vazquez.bio/tags/petos-paradox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PetosParadox</title>
-      <link>/tags/petosparadox/</link>
+      <link>https://vazquez.bio/tags/petosparadox/</link>
       <pubDate>Fri, 21 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/petosparadox/</guid>
+      <guid>https://vazquez.bio/tags/petosparadox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Peto’s paradox</title>
-      <link>/tags/petos-paradox/</link>
+      <link>https://vazquez.bio/tags/petos-paradox/</link>
       <pubDate>Tue, 14 Aug 2018 00:00:00 -0500</pubDate>
       
-      <guid>/tags/petos-paradox/</guid>
+      <guid>https://vazquez.bio/tags/petos-paradox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>/tags/r/</link>
+      <link>https://vazquez.bio/tags/r/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/r/</guid>
+      <guid>https://vazquez.bio/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Markdown</title>
-      <link>/tags/r-markdown/</link>
+      <link>https://vazquez.bio/tags/r-markdown/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/r-markdown/</guid>
+      <guid>https://vazquez.bio/tags/r-markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>apoptosis</title>
-      <link>/tags/apoptosis/</link>
+      <link>https://vazquez.bio/tags/apoptosis/</link>
       <pubDate>Tue, 14 Aug 2018 00:00:00 -0500</pubDate>
       
-      <guid>/tags/apoptosis/</guid>
+      <guid>https://vazquez.bio/tags/apoptosis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cancer</title>
-      <link>/tags/cancer/</link>
+      <link>https://vazquez.bio/tags/cancer/</link>
       <pubDate>Tue, 14 Aug 2018 00:00:00 -0500</pubDate>
       
-      <guid>/tags/cancer/</guid>
+      <guid>https://vazquez.bio/tags/cancer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>elephant</title>
-      <link>/tags/elephant/</link>
+      <link>https://vazquez.bio/tags/elephant/</link>
       <pubDate>Tue, 14 Aug 2018 00:00:00 -0500</pubDate>
       
-      <guid>/tags/elephant/</guid>
+      <guid>https://vazquez.bio/tags/elephant/</guid>
       <description></description>
     </item>
     
     <item>
       <title>github</title>
-      <link>/tags/github/</link>
+      <link>https://vazquez.bio/tags/github/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/github/</guid>
+      <guid>https://vazquez.bio/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>plot</title>
-      <link>/tags/plot/</link>
+      <link>https://vazquez.bio/tags/plot/</link>
       <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/plot/</guid>
+      <guid>https://vazquez.bio/tags/plot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>refunctionalized pseudogene</title>
-      <link>/tags/refunctionalized-pseudogene/</link>
+      <link>https://vazquez.bio/tags/refunctionalized-pseudogene/</link>
       <pubDate>Tue, 14 Aug 2018 00:00:00 -0500</pubDate>
       
-      <guid>/tags/refunctionalized-pseudogene/</guid>
+      <guid>https://vazquez.bio/tags/refunctionalized-pseudogene/</guid>
       <description></description>
     </item>
     
