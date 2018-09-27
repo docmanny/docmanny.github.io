@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Markdown on Vazquez.Bio</title>
+    <link>/tags/r-markdown/</link>
+    <description>Recent content in R Markdown on Vazquez.Bio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Juan Manuel Vazquez</copyright>
+    <lastBuildDate>Wed, 26 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>These are a few of my favorite graphs</title>
+      <link>/2018/09/26/favorite-graphs/</link>
+      <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/09/26/favorite-graphs/</guid>
+      <description>Introduction There are always some big papers which one cites left and right, because they’ve generated a very important dataset, or have a very succinct paper. Here, I will be using R to improve upon these original graphs, and also provide an interactive view of them.
+ Libraries library(tidyverse) options(readr.num_columns = 0) library(ggrepel) library(ggpubr) library(plotly)  SEER Cancer Statistics: Cancer Incidence as a Function of Age seer &amp;lt;- read_lines( &amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>The Relationship between Body Size and Lifespan</title>
+      <link>/2017/04/21/relationship-body-size-lifespan/</link>
+      <pubDate>Fri, 21 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/21/relationship-body-size-lifespan/</guid>
+      <description>Introduction While aging is an inevitable process for most species, there is an incredible diversity of lifespans throughout the Tree of Life, ranging from a few days to several millenia. For researchers interested in the fundamental biology behind aging, seeing what aspects of an organism’s biology correlate to lifespan is an important first step on the path to finding concrete explanations behind their longevity.</description>
+    </item>
+    
+  </channel>
+</rss>
