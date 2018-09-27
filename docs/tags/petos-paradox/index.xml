@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Peto’s paradox on Vazquez.Bio</title>
+    <title>Petos-paradox on Vazquez.Bio</title>
     <link>https://vazquez.bio/tags/petos-paradox/</link>
-    <description>Recent content in Peto’s paradox on Vazquez.Bio</description>
+    <description>Recent content in Petos-paradox on Vazquez.Bio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Juan Manuel Vazquez</copyright>
-    <lastBuildDate>Tue, 14 Aug 2018 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://vazquez.bio/tags/petos-paradox/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>A Zombie LIF Gene in Elephants Is Upregulated by TP53 to Induce Apoptosis in Response to DNA Damage</title>
-      <link>https://vazquez.bio/publication/zombie-lif-gene-elephant/</link>
-      <pubDate>Tue, 14 Aug 2018 00:00:00 -0500</pubDate>
+      <title>Gene Duplications in Peto&#39;s Paradox</title>
+      <link>https://vazquez.bio/project/petos-paradox/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 -0500</pubDate>
       
-      <guid>https://vazquez.bio/publication/zombie-lif-gene-elephant/</guid>
-      <description></description>
+      <guid>https://vazquez.bio/project/petos-paradox/</guid>
+      <description>One of the many observations we have made is frequently referred to as Peto&amp;rsquo;s Paradox, so named after Richard Peto, who showed in 1975 that, per cell, mice had a higher rate of cancer than humans, and mused about the relationship between body-size and cancer rates. The Paradox, in a nutshell, comes from the simple fact that every cell in an animal&amp;rsquo;s body has the potential to become a tumor given the right set of mutations; furthermore, cells will steadily accumulate mutations throughout their lifetime.</description>
     </item>
     
   </channel>

@@ -7,19 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Juan Manuel Vazquez</copyright>
-    <lastBuildDate>Thu, 27 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://vazquez.bio/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Blogdown</title>
-      <link>https://vazquez.bio/tags/blogdown/</link>
-      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://vazquez.bio/tags/blogdown/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>DataInMotion</title>
@@ -27,15 +18,6 @@
       <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://vazquez.bio/tags/datainmotion/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://vazquez.bio/tags/hugo/</link>
-      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://vazquez.bio/tags/hugo/</guid>
       <description></description>
     </item>
     
@@ -76,18 +58,9 @@
     </item>
     
     <item>
-      <title>R</title>
-      <link>https://vazquez.bio/tags/r/</link>
-      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://vazquez.bio/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>R Markdown</title>
       <link>https://vazquez.bio/tags/r-markdown/</link>
-      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://vazquez.bio/tags/r-markdown/</guid>
       <description></description>
@@ -117,15 +90,6 @@
       <pubDate>Tue, 14 Aug 2018 00:00:00 -0500</pubDate>
       
       <guid>https://vazquez.bio/tags/elephant/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>github</title>
-      <link>https://vazquez.bio/tags/github/</link>
-      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://vazquez.bio/tags/github/</guid>
       <description></description>
     </item>
     
