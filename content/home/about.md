@@ -30,7 +30,7 @@ weight = 5
   year = 2015
 
 [[education.courses]]
-  course = "Ba in Chemistry"
+  course = "BA in Chemistry"
   institution = "University of Rochester"
   year = 2015
  
