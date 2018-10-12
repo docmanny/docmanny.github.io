@@ -52,7 +52,8 @@ seer <- read_lines(
         ordered = T
         )
       )
-    ) 
+    ) %>% 
+  mutate(`Race/Ethnicity` = str_remove(`Race/Ethnicity`, "\\(includes Hispanic\\)"))
 
 seer.plot <- seer %>%
   filter(
@@ -80,7 +81,7 @@ seer.plot <- seer %>%
     legend.position = "bottom"
     )
 
-ggplotly(seer.plot)
+seer.plot %>% ggplotly()
 ```
 
 
@@ -115,7 +116,7 @@ million.women.plot <- million.women %>%
   theme_pubclean() + 
   theme(axis.text.x = element_text(angle = 45, vjust = .5))
 
-ggplotly(million.women.plot)
+million.women.plot %>% ggplotly()
 ```
 
 
@@ -149,5 +150,5 @@ Abegglen2015.plot <- Abegglen2015 %>%
   theme_pubclean()  + 
   ylim(c(-1,80))
 
-ggplotly(Abegglen2015.plot)
+Abegglen2015.plot %>% ggplotly()
 ```
