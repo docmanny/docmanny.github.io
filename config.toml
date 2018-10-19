@@ -61,7 +61,7 @@ enableGitInfo = true
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
   organizations = [ 
   { name = "Ph.D. Candidate - Department of Human Genetics, University of Chicago", url = "https://genes.uchicago.edu/" }, 
-  {name = "President - SACNAS UChicago Chapter", url="ucsacnas.com"} 
+  {name = "President - SACNAS UChicago Chapter", url="https://ucsacnas.com"} 
   ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
@@ -304,13 +304,13 @@ enableGitInfo = true
 
 [[menu.main]]
   name = "RecBlast"
-  url = "//RecBlast.vazquez.bio"
+  url = "https://recsearch.vazquez.bio/"
   parent = "repos"
   weight = 1
 
 [[menu.main]]
   name = "PromegaParser"
-  url = "//www.github.com/docmanny/PromegaParser"
+  url = "https://www.github.com/docmanny/PromegaParser/"
   parent = "repos"
   weight = 2
 
