@@ -7,7 +7,7 @@
 # The URL of your website.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 baseurl = "https://vazquez.bio"
-publishDir = "docs"
+publishDir = "public"
 
 # Title of your site
 title = "Vazquez.Bio"
@@ -112,7 +112,7 @@ enableGitInfo = true
   font = "default"
 
   # Description for social sharing and search engines. If undefined, author role is used in place.
-  description = ""
+  description = "Puerto Rican Scientist at the University of Chicago working on the Biology of Aging and Cancer in Bats, Elephants, and Whales."
   
   # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
   sharing_image = "portrait.jpg"
@@ -304,13 +304,13 @@ enableGitInfo = true
 
 [[menu.main]]
   name = "RecBlast"
-  url = "RecBlast.html"
+  url = "//RecBlast.vazquez.bio"
   parent = "repos"
   weight = 1
 
 [[menu.main]]
   name = "PromegaParser"
-  url = "PromegaParser.html"
+  url = "//www.github.com/docmanny/PromegaParser"
   parent = "repos"
   weight = 2
 
