@@ -165,7 +165,7 @@ Looking at Aves, or birds, we can see that there's actually a fairly clear posit
 
 Now, while I may be biased, I want to look at the most interesting clade: mammals!    
 
-```{r plot_mammals}
+```{r plot_mammals, fig.width=16}
 # Select all mammals with values for size and lifespan
 anage.mammalia <- anage.chordata %>% 
   filter(
@@ -174,9 +174,9 @@ anage.mammalia <- anage.chordata %>%
 # Graph!
 p.mammalia <- anage.mammalia %>% 
   ggplot(
-    aes(`Adult weight (g)`, `Maximum longevity (yrs)`, color=Order, text=str_glue("Common Name: {`Common name`}<br>Data Quality: {`Data quality`}<br>Sample size: {`Sample size`}"))
+    aes(x=`Adult weight (g)`, y=`Maximum longevity (yrs)`, color=Order, text=str_glue("Common Name: {`Common name`}<br>Data Quality: {`Data quality`}<br>Sample size: {`Sample size`}"))
   ) +
-  geom_point(size=0.5) +
+  geom_point(size=rel(2)) +
   scale_x_log10() +
   scale_y_log10() +
   geom_smooth(
@@ -187,14 +187,21 @@ p.mammalia <- anage.mammalia %>%
     lty="dashed"
     )+
   labs(
-    title='A Positive Correlation Between Size and Lifespan Across All Mammals',
-    y='Adult Weight - log(g)',
-    x='Maximum Longevity - log(yrs) '
+    #title='A Positive Correlation Between Size and Lifespan Across All Mammals',
+    x='Adult Weight - log(g)',
+    y='Maximum\nLongevity\nlog(years) ',
+    caption = "Human Ageing Genomic Resources:\nAnAge Build 14, 2017"
   ) +
   theme_pubclean() + 
-  labs_pubr()
+  labs_pubr()+
+  theme(
+    legend.position = "bottom",
+    text = element_text(size=24),
+    axis.title.y = element_text(angle=0, vjust = 0.5)
+  )
 
-ggplotly(p.mammalia)
+p.mammalia
+#ggplotly(p.mammalia)
 ```
 
 Here we see the beautiful correlation between mammalian weight and lifespan! Take a moment to notice some of the subtle things this graph suggest. Rodents are actually shorter-lived as a clade than one would expect based on their size, while bats and primates are longer-lived than expected. A commonplace theory behind this is that the ability to escape terrestial predators allows bats and primates to avoid predators that would otherwise hunt them alongside existing terrestial prey, like rodents; since they are now less likely to die due to extrinsic predatorial dangers, genetic changes that allow for extended lifespan can take root and either be selected for actively or evolve neutrally. 
