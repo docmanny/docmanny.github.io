@@ -1,0 +1,154 @@
+---
+title: These are a few of my favorite graphs
+author: Juan M Vazquez
+date: '2018-09-26'
+slug: favorite-graphs
+categories:
+  - DataInMotion
+tags:
+  - DataInMotion
+  - plot
+  - R Markdown
+header:
+  caption: ''
+  image: ''
+---
+
+
+## Introduction
+
+There are always some big papers which one cites left and right, because they've generated a very important dataset, or have a very succinct paper. Here, I will be using `R` to improve upon these original graphs, and also provide an interactive view of them. 
+
+
+## Libraries  
+
+```{r libraries, message=F, warning=F}
+library(tidyverse)
+options(readr.num_columns = 0)
+library(ggrepel)
+library(ggpubr)
+library(plotly)
+```
+
+## SEER Cancer Statistics: Cancer Incidence as a Function of Age  
+
+```{r SEER}
+seer <- read_lines(
+  "../data/other/SEER18_IncidenceByAge_Sex_Race.csv",
+  skip=3
+  ) %>% 
+  head(n=-13) %>% 
+  paste(collapse = "\n") %>%
+  read_csv(
+    na = "-",
+    col_names = T,
+    col_types = list(
+      "Sex"=col_factor(c("Both Sexes", "Female", "Male")),
+      "Race/Ethnicity"=col_factor(
+        c('All Races (includes Hispanic)', 'American Indian / Alaska Native (includes Hispanic)', 'Asian / Pacific Islander (includes Hispanic)', 'Black (includes Hispanic)', 'Hispanic (any race)', 'Non-Hispanic White', 'White (includes Hispanic)')
+        ),
+      "Age" = col_factor(
+        c('<1', '1-4', '5-9', '10-14', '15-19', '20-24', '25-29', '30-34', '35-39', '40-44', '45-49', '50-54', '55-59', '60-64', '65-69', '70-74', '75-79', '80-84', '85+'), 
+        ordered = T
+        )
+      )
+    ) %>% 
+  mutate(`Race/Ethnicity` = str_remove(`Race/Ethnicity`, "\\(includes Hispanic\\)"))
+
+seer.plot <- seer %>%
+  filter(
+    Sex=="Both Sexes",
+    !Age %in% c("<1","5-9") # No data
+    ) %>% 
+  ggplot(aes(x=as.factor(`Age`), y=`Rate per 100,000`, color=`Race/Ethnicity`)) + 
+  geom_point() +
+  geom_ribbon(
+    aes(
+      ymin=`Rate Lower Confidence Interval`, 
+      ymax=`Rate Upper Confidence Interval`, 
+      ),
+    alpha=0.2
+  ) + 
+  scale_y_log10() + 
+  labs(
+    y="Incidence Rate per 100,000 (log)",
+    x="Age at Diagnosis",
+    title="SEER18 Cancer Statistics Review, 1975-2015, NCI"
+    ) + 
+  theme_pubclean() + 
+  theme(
+    axis.text.x = element_text(angle = 45, vjust = .5),
+    legend.position = "bottom"
+    )
+
+seer.plot %>% ggplotly()
+```
+
+
+```{r}
+million.women <- read_csv(
+  "../data/other/Height_Cancer_Million_Women_Study_2011.csv",
+  col_types = list(
+    "Height" = col_factor(
+      c('<155', '155', '160', '165', '170', '>=175'), 
+      ordered = T
+    )
+  )
+  ) 
+
+million.women.plot <- million.women %>% 
+  ggplot(
+    aes(x=Height, y=RR, text=str_glue("Sample Size: {N.Women}"))
+  ) +
+  geom_line(
+    aes(group=1)
+  )+
+  geom_point() +
+  geom_ribbon(
+    aes(ymin=LCI, ymax=UCI, group=1),
+    alpha=0.2
+  ) + 
+  labs(
+    y="Relative Risk of Cancer (vs <155cm)",
+    x="Height (cm)",
+    title="J Green et al, 2011, Million Women Cancer Study"
+    ) + 
+  theme_pubclean() + 
+  theme(axis.text.x = element_text(angle = 45, vjust = .5))
+
+million.women.plot %>% ggplotly()
+```
+
+
+```{r}
+Abegglen2015 <- read_csv("../data/other/Abegglenetal2015CancerTable.csv") %>% 
+  mutate(
+    logMassLifeSpan=log10(`Adultmass(Kg)`)+log10(`Maximumlifespan(yrs)`)
+    ) 
+
+Abegglen2015.plot <- Abegglen2015 %>% 
+  ggplot(
+    aes(
+      x=logMassLifeSpan, 
+      y=`%Tumors`,
+      weight=`#Necropsies`#,
+      # text=str_glue("{CommonName}")
+      )
+    ) +
+  geom_point(aes(text=str_glue("{CommonName}")))+
+  geom_errorbar(aes(ymin=`Lowerlimit95%CI`, ymax=`Upperlimit95%CI`), width=.1, alpha=0.2) +
+  labs(
+    y="% Necropsies with Tumors",
+    x="log(Mass(g)xLifespan(yrs))",
+    title="Abegglen et al, 2015"
+      ) +
+  geom_smooth(
+    method="lm",
+    lty="dashed",
+    color="black"
+    ) + 
+  theme_pubclean()  + 
+  ylim(c(-1,80))
+
+Abegglen2015.plot %>% ggplotly()
+```
