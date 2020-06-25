@@ -1,0 +1,7 @@
+static/manny/2019-07-16_GRCTalk.pptx filter=lfs diff=lfs merge=lfs -text
+static/manny/2019-10-24_JuanVazquez2019NASBR.pptx filter=lfs diff=lfs merge=lfs -text
+static/manny/JuanVazquezThesisDefense.pptx filter=lfs diff=lfs merge=lfs -text
+static/manny/JuanVazquezThesisDefense.mp4 filter=lfs diff=lfs merge=lfs -text
+*.pptx filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+static/manny/*.pptx filter=lfs diff=lfs merge=lfs -text
