@@ -1,23 +1,31 @@
 ---
-title: "Gene Duplications in Peto's Paradox"
-summary: "Are cases of individual tumor suppressor duplications in Peto's Paradox lineages one-off events, or part of a general mechanism?""
-tags:
-- "Petos-Paradox"
-- "Graduate"
-date: "2016-04-27T00:00:00Z"
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "Peto's Paradox"
+summary: "Are cases of individual tumor suppressor duplications in Peto's Paradox lineages one-off events, or part of a general mechanism"
+authors: ["manny"]
+tags: ["Petos-paradox","Graduate"]
+categories: ["Graduate"]
+date: 2016-04-27T00:00:00Z
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
 
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: Whales, Elephants, and Bats
-  focal_point: Smart
+  caption: "Whales, Elephants, and Bats"
+  focal_point: "Smart"
 
+# Custom links (optional).
+#   Uncomment and edit lines below to show custom links.
 # links:
-# - icon: twitter
+# - name: Follow
+#   url: https://twitter.com
 #   icon_pack: fab
-#   name: Follow
-#   url: https://twitter.com/georgecushen
+#   icon: twitter
+
 url_code: ""
 url_pdf: ""
 url_slides: ""

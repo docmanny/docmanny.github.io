@@ -1,11 +1,11 @@
 ---
 title: "The Role of Tumor-Supressor Duplications in Mediating Peto's Paradox"
 authors:
-- JM Vazquez
-- VJ Lynch
+  - JM Vazquez
+  - VJ Lynch
 author_notes:
-- ""
-- "Corresponding Author: vjlynch@berkeley.edu"
+  - ""
+  - "Corresponding Author: vjlynch@berkeley.edu"
 date: 2017-06-11T00:00:00
 doi: ""
 
