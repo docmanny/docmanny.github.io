@@ -1,5 +1,5 @@
 ---
-title: "The Role of Gene Duplication in Mediating Peto's Paradox in Afrotheria and Chiroptera"
+title: "The Role of Tumor-Supressor Duplications in Mediating Peto's Paradox"
 authors:
 - JM Vazquez
 - VJ Lynch

@@ -9,6 +9,7 @@ tags:
   - DataInMotion
   - plot
   - R Markdown
+  - Petos-paradox
 header:
   caption: ''
   image: ''

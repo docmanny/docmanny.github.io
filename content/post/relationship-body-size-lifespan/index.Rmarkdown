@@ -200,8 +200,8 @@ p.mammalia <- anage.mammalia %>%
     axis.title.y = element_text(angle=0, vjust = 0.5)
   )
 
-p.mammalia
-#ggplotly(p.mammalia)
+#p.mammalia
+ggplotly(p.mammalia)
 ```
 
 Here we see the beautiful correlation between mammalian weight and lifespan! Take a moment to notice some of the subtle things this graph suggest. Rodents are actually shorter-lived as a clade than one would expect based on their size, while bats and primates are longer-lived than expected. A commonplace theory behind this is that the ability to escape terrestial predators allows bats and primates to avoid predators that would otherwise hunt them alongside existing terrestial prey, like rodents; since they are now less likely to die due to extrinsic predatorial dangers, genetic changes that allow for extended lifespan can take root and either be selected for actively or evolve neutrally. 
