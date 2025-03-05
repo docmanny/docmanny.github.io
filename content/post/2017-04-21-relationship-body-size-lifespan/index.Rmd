@@ -1,0 +1,358 @@
+---
+title: The Relationship between Body Size and Lifespan
+authors: 
+  - JMV
+date: "2017-04-21"
+categories:
+  - DataVisualization
+tags:
+  - R Markdown
+  - DataVisualization
+  - PetosParadox
+header:
+  caption: ''
+  image: ''
+---
+
+
+## Introduction
+
+While aging is an inevitable process for most species, there is an incredible diversity of lifespans throughout the Tree of Life, ranging from a few days to [several millenia][]. For researchers interested in the fundamental biology behind aging, seeing what aspects of an organism's biology correlate to lifespan is an important first step on the path to finding concrete explanations
+behind their longevity.  
+For example, in 1975, Dr. Richard Peto published [a paper][] where he established that the different sizes and lifespans of humans and mice didn't really relate to their respective cancer rates. This was described as Peto's Paradox, because the expectation was originally that over a lifetime, every cell will accumulate mutations that could eventually cause it to become cancerous; and if an animal had more cells, then this lifetime risk of cancer would only increase further. In fact, it turns out that there
+is no relationship between body size, lifespan, and cancer, which is the fact that underlies the focus of my own research!  
+As we will explore in this section, this paradox is further complicated by another unexpected relationship: animals that are larger tend to also live longer.
+
+## Graphing the Data
+
+For this analysis, we will be using the [AnAge database][] of ageing and life history
+in animals. This database has entries for over 4200 species of animals
+(also 2 plants and 3 fungi) with data like max lifespan, growth rates and weights at
+different life stages, descriptions, and metabolism, amongst other things.  
+
+First, let's take a look at the data itself:
+
+```{r packages, message=FALSE}
+# These are the packages we will be using in this analysis
+library(tidyverse)
+options(readr.num_columns = 0)
+library(ggpubr)
+library(plotly)
+library(kableExtra)
+
+```
+
+```{r load_data, message=FALSE}
+# Read the data into a dataframe:
+anage <- read_tsv("data/anage_build14.txt", 
+                  col_names = T, 
+                  col_types = list(
+                    "References" = col_character(),   # Needs to be specified or else its interpreted as <int>
+                    "Sample size" = col_factor(c("tiny", "small", "medium", "large", "huge"), ordered = T),
+                    "Data quality" = col_factor(c("low", "questionable", "acceptable", "high"), ordered = T)
+                    )
+                  )
+# Look at the data using str()
+anage %>% str()
+```
+
+Using `str()` is a useful way of quickly seeing the different columns of data and the type of data in each. Of interest are the taxonomic columns, the Adult Weight column, and the Maximum Lifespan column.
+You can also use `head()` to look at the first few rows; here we're using the `kableExtra` package to visualize the first 100 rows neatly.
+
+```{r see_data}
+anage %>% 
+  head(n = 100) %>%
+  kableExtra::kbl() %>%
+  kable_material_dark(c("striped", "hover")) %>% 
+  scroll_box(width = "100%", height = "500px")
+```
+
+Note: using `tibble` from `tidyverse` also automatically shows only the first few rows of the dataset in the console if you call `anage` by itself.    
+
+### All species
+
+Let's try graphing now. First, we will graph all the species; we will graph the adult weights versus their maximum lifespan, and color the datapoints by their Phylum:  
+
+
+```{r plot_all}
+# Create the basic plot
+p.all <- anage %>% 
+  ggplot(
+    aes(`Adult weight (g)`, `Maximum longevity (yrs)`, color=Phylum, text=str_glue("Common Name: {`Common name`}<br>Data Quality: {`Data quality`}<br>Sample size: {`Sample size`}"))
+  ) +
+  geom_point(size=0.5) +
+  scale_x_log10() +
+  scale_y_log10() +
+  labs(
+    title='AnAge Species Adult Weight vs Lifespan',
+    y='Adult Weight - log(g)',
+    x='Maximum Longevity - log(yrs) '
+  ) + 
+  theme_pubclean() + 
+  labs_pubr()
+# Output the interactive plot
+ggplotly(p.all)
+
+```
+
+*(Note that we scaled the axes using a log-scale; this is done because we want to highlight orders-of-magnitude changes over small-scale change - in other words, we don't care so much about the difference between 1-2 grams and 100-200 grams as much as a change between 1-10 grams and 100-1000 grams.)*  
+
+You can see that the graph already has a clear upwards trend! However, there's a bit of an issue that's striking in the color scheme; where are our non-chordate species? The first guess I have is that it relates to size measurements - that's relatively easy to check:  
+
+```{r non-chordate size}
+anage %>% 
+  filter(!Phylum=="Chordata") %>% 
+  select(Kingdom, Phylum, Genus, Species, `Common name`, `Maximum longevity (yrs)`, contains("weight")) %>% 
+  kableExtra::kbl() %>%
+  kable_material_dark(c("striped", "hover")) %>% 
+  scroll_box(width = "100%", height = "1000px")
+```
+
+None of the non-chordates in the AnAge database have any weight information - go figure! However, from the lifespan, we can see that some of these live a ridiculously long time:  
+
+```{r get_outliers}
+# Filter anage based on the weird characteristics:
+anage %>% 
+  arrange(desc(`Maximum longevity (yrs)`)) %>% 
+  head %>% 
+  select(Kingdom, Phylum, Genus, Species, `Common name`, `Maximum longevity (yrs)`, `Adult weight (g)`, `Data quality`) %>%
+  kableExtra::kbl() %>%
+  kable_material_dark(c("striped", "hover")) %>% 
+  scroll_box(width = "100%", height = "1000px")
+  
+```
+Remember how I said that some animals live for millenia? Behold the humble sponge; specifically, _Scolymastra joubini_, which apparently lives for 15,000 years! Its worth noting the column "Data.quality" here; there's some skepticism in the literature as to whether or not this is estimate is real, since its so incredible. Runners-up include the Great Basin bristlecone pine, the Ocean quahog clam, the Greanland Shark, and my favorite, the Bowhead Whale!  
+
+
+### Chordates
+Moving on, let us graph the chordates, and color by class. Also, while we're at it, let's quantify the relationship between size and lifespan using a linear regression:  
+
+```{r plot_chordates}
+anage.chordata <- anage %>% 
+  filter(
+    Phylum=="Chordata",
+    !is.na(`Adult weight (g)`),
+    !is.na(`Maximum longevity (yrs)`)
+      )
+
+
+# Basic Graph
+p.chordata <- anage.chordata %>% 
+  ggplot(
+    aes(`Adult weight (g)`, `Maximum longevity (yrs)`, color=Class, text=str_glue("Common Name: {`Common name`}<br>Data Quality: {`Data quality`}<br>Sample size: {`Sample size`}"))
+  ) +
+  geom_point(size=0.5) +
+  scale_x_log10() +
+  scale_y_log10() +
+  geom_smooth(
+    method='lm', 
+    aes(`Adult weight (g)`, `Maximum longevity (yrs)`), 
+    inherit.aes = FALSE,
+    col="black",
+    lty="dashed"
+    )+
+  labs(
+    title='Chordates Adult Weight vs Lifespan',
+    y='Adult Weight - log(g)',
+    x='Maximum Longevity - log(yrs) '
+  ) +
+  theme_pubclean() + 
+  labs_pubr()
+
+# Output the interactive plot
+ggplotly(p.chordata)
+```
+
+Overall, there seems to be a positive trend; we can already see the outliers that are extremely long-lived for their size by hovering over the points to read the common names. As you can see, the longest lived chordates by far are the Rougheye Rockfish, at 205 years; and the Bowhead Whale, at 211 years. A little further down the y axis, we see many more fish, humans (!), and some more whales. Now we can look further at the data by clicking on the classes on the legend to hide those points.  
+
+Hide everything so that we can only see Actinopterygii, which is the class of ray-finned fish. This group accounts for almost all of the living fish species, and makes up half of all living vertebrates. As you can see, for any given weight of fish, you could probably find many short lived fish and a couple of really long-lived fish. In contrast, if you look only at Amphibians, you can see that based on our data they pretty much cluster tightly with the exception of the Olm, which lives a very long time for its size.  
+
+Looking at Aves, or birds, we can see that there's actually a fairly clear positive relationship between size and longevity, with most of the density in the plot at the small-and-short-lived end of the tail, fanning out as you get larger and larger. Were I to venture a guess, this fan-shaped pattern is suggestive of the two sides of Peto's Paradox: some of these birds seem to live longer as per the pattern, but some of them seem to be shorter-lived than one would expect. One thing that caught my attention was how emus and cassowaries, which are sister species, are all shorter-lived than the ostrich, which is at the root of the Ratite clade. While this alone means nothing, its small things of note like this that could lead to the start of some really interesting work!  
+
+### Mammals
+
+Now, while I may be biased, I want to look at the most interesting clade: mammals!    
+
+```{r plot_mammals}
+# Select all mammals with values for size and lifespan
+anage.mammalia <- anage.chordata %>% 
+  filter(
+    Class == 'Mammalia')
+
+# Graph!
+p.mammalia <- anage.mammalia %>% 
+  ggplot(
+    aes(x=`Adult weight (g)`, y=`Maximum longevity (yrs)`, color=Order, text=str_glue("Common Name: {`Common name`}<br>Data Quality: {`Data quality`}<br>Sample size: {`Sample size`}"))
+  ) +
+  geom_point(
+    # size=rel(2)
+  ) +
+  scale_x_log10() +
+  scale_y_log10() +
+  geom_smooth(
+    method='lm', 
+    aes(`Adult weight (g)`, `Maximum longevity (yrs)`), 
+    inherit.aes = FALSE,
+    col="black",
+    lty="dashed"
+    )+
+  labs(
+    #title='A Positive Correlation Between Size and Lifespan Across All Mammals',
+    x='Adult Weight [log(g)]',
+    y='Maximum\nLongevity\n[log(years)]',
+    caption = "Human Ageing Genomic Resources:\nAnAge Build 14, 2017"
+  ) +
+  theme_pubclean() + 
+  labs_pubr()+
+  theme(
+    legend.position = "bottom",
+    # text = element_text(size=24),
+    # axis.title.y = element_text(angle=0, vjust = 0.5)
+  )
+
+#p.mammalia
+ggplotly(p.mammalia) 
+```
+
+Here we see the beautiful correlation between mammalian weight and lifespan! Take a moment to notice some of the subtle things this graph suggest. Rodents are actually shorter-lived as a clade than one would expect based on their size, while bats and primates are longer-lived than expected. A commonplace theory behind this is that the ability to escape terrestial predators allows bats and primates to avoid predators that would otherwise hunt them alongside existing terrestial prey, like rodents; since they are now less likely to die due to extrinsic predatorial dangers, genetic changes that allow for extended lifespan can take root and either be selected for actively or evolve neutrally. 
+
+
+## The Three Clades: Chiroptera, Paenungulata, and Balaenidae
+
+The three clades that I personally focus on are _Chiroptera_ (bats), _Paenungulata_ (elephants and their closest relatives), and _Balaenidae_ (bowhead and right whales). Both elephants and whales describe extreme examples of size and lifespan in mammals, which leads to interesting questions about how they avoid having astronomically high rates of cancer. Bats, on the other hand, may not seem as interesting at first, but as I will show you next, represent a more robust way of answering the question of Peto's Paradox. 
+
+### Bats
+
+```{r plot_bats}
+
+anage.chiroptera <- anage.mammalia %>% 
+  filter(Order=='Chiroptera')
+
+# Once more, with vigor!
+p.bats <- anage.chiroptera %>% 
+  ggplot(
+    aes(`Adult weight (g)`, `Maximum longevity (yrs)`, color=Family, text=str_glue("Common Name: {`Common name`}<br>Data Quality: {`Data quality`}<br>Sample size: {`Sample size`}"))
+  ) +
+  geom_point() +
+  scale_x_log10() +
+  scale_y_log10() +
+  scale_alpha_discrete(range=c(0.5,1)) + 
+  geom_smooth(
+    method='lm', 
+    aes(`Adult weight (g)`, `Maximum longevity (yrs)`, color=Family), 
+    inherit.aes = F,
+    se=F
+    )+ 
+  geom_smooth(
+    method='lm', 
+    aes(`Adult weight (g)`, `Maximum longevity (yrs)`, text="Chiroptera"), 
+    inherit.aes = FALSE,
+    col="blue",
+    lty="dashed"
+    )+
+  geom_smooth(
+      data = anage %>% filter(Class == 'Mammalia',!is.na(`Adult weight (g)`), !is.na(`Maximum longevity (yrs)`)), 
+      method='lm', 
+      aes(`Adult weight (g)`, `Maximum longevity (yrs)`, text="Mammalia"), 
+      inherit.aes = FALSE, 
+      col="black", lty="dashed", alpha=0.5
+      ) +
+  labs(
+    title='Paenungulata Adult Weight vs Lifespan',
+    y='Adult Weight [log(g)]',
+    x='Maximum Longevity [log(yrs)]'
+  ) +
+  coord_cartesian(xlim=c(3e0,2e3), ylim=c(3e0,1e2))+
+  theme_pubclean() + 
+  labs_pubr()
+ggplotly(p.bats)
+```
+
+### Paenungulata
+
+```{r Paenungulata}
+
+anage.paenungulata <- anage.mammalia %>% 
+  filter(Order %in% c('Proboscidea','Sirenia', 'Hyracoidea'))
+
+p.paen <- anage.paenungulata %>% 
+  ggplot(
+    aes(`Adult weight (g)`, `Maximum longevity (yrs)`, color=Family, text=str_glue("Common Name: {`Common name`}<br>Data Quality: {`Data quality`}<br>Sample size: {`Sample size`}"))
+  ) +
+  geom_point() +
+  scale_x_log10() +
+  scale_y_log10() + 
+  geom_smooth(
+    method='lm', 
+    aes(`Adult weight (g)`, `Maximum longevity (yrs)`), 
+    inherit.aes = FALSE,
+    col="blue",
+    lty="dashed"
+    )+
+  geom_smooth(
+    data = anage.mammalia, 
+    method='lm', 
+    aes(`Adult weight (g)`, `Maximum longevity (yrs)`), 
+    inherit.aes = FALSE, 
+    col="black", lty="dashed", alpha=0.5
+    ) +
+  coord_cartesian(xlim=c(1e2,1e7), ylim=c(1e1,2e2))+
+  labs(
+    title='Paenungulata Adult Weight vs Lifespan',
+    y='Adult Weight - log(g)',
+    x='Maximum Longevity - log(yrs) '
+  ) +
+  theme_pubclean() + 
+  labs_pubr()
+
+
+ggplotly(p.paen)
+```
+
+
+### Cetacea
+
+```{r cetacea}
+
+anage.cetacea <- anage.mammalia %>% 
+  filter(Order %in% c('Cetacea'))
+
+p.cetacea <- anage.cetacea %>% 
+  ggplot(
+    aes(`Adult weight (g)`, `Maximum longevity (yrs)`, color=Family, text=str_glue("Common Name: {`Common name`}<br>Data Quality: {`Data quality`}<br>Sample size: {`Sample size`}"))
+  ) +
+  geom_point() +
+  scale_x_log10() +
+  scale_y_log10() + 
+  geom_smooth(
+    method='lm', 
+    aes(`Adult weight (g)`, `Maximum longevity (yrs)`), 
+    inherit.aes = FALSE,
+    col="blue",
+    lty="dashed"
+    )+
+  geom_smooth(
+    data = anage.mammalia, 
+    method='lm', 
+    aes(`Adult weight (g)`, `Maximum longevity (yrs)`), 
+    inherit.aes = FALSE, 
+    col="black", lty="dashed", alpha=0.5
+    ) +
+  coord_cartesian(
+    # xlim=c(1e2,1e7), ylim=c(1e1,2e2)
+  )+
+  labs(
+    title='Cetacea Adult Weight vs Lifespan',
+    y='Adult Weight - log(g)',
+    x='Maximum Longevity - log(yrs) '
+  ) +
+  theme_pubclean() + 
+  labs_pubr()
+
+
+ggplotly(p.cetacea)
+```
+
+[several millenia]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4133289/
+[a paper]: https://www.ncbi.nlm.nih.gov/pubmed/1212409
+[AnAge database]: http://genomics.senescence.info/species/

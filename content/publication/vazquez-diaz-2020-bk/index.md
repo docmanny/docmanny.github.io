@@ -1,0 +1,57 @@
+---
+title: The Role of Tumor-Supressor Duplications in Mediating Peto's Paradoxin Afrotheria
+  and Chiroptera
+date: '2020-08-01'
+draft: true
+publishDate: '2025-03-04T23:39:03.719208Z'
+authors:
+- Juan Manuel Vazquez Diaz
+publication_types:
+- '7'
+abstract: "Cancer is a disease intrinsic to multicellularity. Within a species, body\
+  \ size and lifespan are strongly correlated with cancer risk; between species, however,\
+  \ this correlation no longer holds. This phenomena, known as Peto’s Paradox, requires\
+  \ that species evolve cancer suppression mechanisms alongside increases in size\
+  \ and lifespan. Previous studies have identified instances of tumor suppressor duplications\
+  \ in large, long-lived species, suggesting a greater role for gene duplication in\
+  \ resolving Peto’s Paradox. Thus, in this thesis, I identified all protein-coding\
+  \ gene duplications in available genomes to determine if tumor suppressor pathways\
+  \ were enriched among duplicated genes in large, long-lived species. Then, I selected\
+  \ two hits in large, long-lived species to characterize in primary fibroblasts,\
+  \ and determine their effects on cell cycle and cell death in response to stress:\
+  \ LIF in the African Elephant (Loxodonta africana) and TP53 in the Little Brown\
+  \ Bat (Myotis lucifugus). To determine if tumor suppressors gene duplications are\
+  \ more common in large-bodied Atlantogenatans, I used a Reciprocal Best-Hit BLAT\
+  \ strategy to obtain copy numbers of all protein-coding genes in Atlantogenatan\
+  \ genomes. From an initial set of 18,011 protein-coding genes, I identified a median\
+  \ of 13,880 genes in Atlantogenatan genomes, of which a median of 940 genes are\
+  \ duplicated. Just as body size fluctuates throughout Atlantogenata, tumor suppressor\
+  \ genes also duplicated throughout the phylogenetic tree; furthermore, many of them\
+  \ remain transcriptionally active in extant elephants. Together, the data suggest\
+  \ that the duplication of tumor suppressor genes facilitated the evolution of increased\
+  \ body size in Atlantogenata. The resurrection and re-functionalization of a LIF\
+  \ pseudogene (LIF6) with pro-apoptotic functions in elephants and their extinct\
+  \ relatives (Proboscideans) may have played a role in resolving Peto’s Paradox.\
+  \ LIF6 is transcriptionally up-regulated by TP53 in response to DNA damage, and\
+  \ translocates to the mitochondria where it induces apoptosis. Phylogenetic analyses\
+  \ of living and extinct Proboscidean LIF6 genes indicates its TP53 response element\
+  \ evolved coincident with the evolution of large body sizes in the Proboscidean\
+  \ stem-lineage. These results suggest that re-functionalizing of a pro-apoptotic\
+  \ LIF pseudogene may have been permissive (though not sufficient) for the evolution\
+  \ of large body sizes in Proboscideans. In the long-lived bat, Myotis lucifugus,\
+  \ I describe a duplication of the TP53-WRAP53 locus which may play a role in shaping\
+  \ its unique stress response. While pseudogene copies of TP53 are common in Myotis\
+  \ bats, M. lucifugus has a unique, syntenic duplication of TP53-WRAP53 that has\
+  \ conserved both regulatory and transcriptional functionality. Relative to 4 other\
+  \ closely related bat species (M. evotis, M. thysanodes, M. yumanensis, and E. fuscus),\
+  \ the M. lucifugus demonstrates a unique resistance to DNA damage and generalized\
+  \ oxidative stress, resembling the phenotype of a TP53-WRAP53 locus duplication\
+  \ in a previously-described transgenic mouse model. Overall, these results suggest\
+  \ that gene duplication plays an important role in Peto’s Paradox. While tumor suppressor\
+  \ duplications may facilitate the evolution of increased lifespans and body sizes\
+  \ in the short term, my work suggests the need for a polygenic or omnigenic model\
+  \ for Peto's Paradox in order to comprehensively lay this question to rest."
+featured: false
+publication: ''
+---
+
