@@ -1,9 +1,10 @@
 [build]
-command = 'hugo'
+command = 'hugo --gc --minify'
 publish = 'public'
 
 [build.environment]
 HUGO_VERSION = '0.144.2'
+RUBY_VERSION = '3.4.2'
 
 [context]
 [context.branch-deploy]
