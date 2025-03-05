@@ -2,7 +2,7 @@
 title: The Role of Tumor-Supressor Duplications in Mediating Peto's Paradoxin Afrotheria
   and Chiroptera
 date: '2020-08-01'
-draft: true
+draft: false
 publishDate: '2025-03-04T23:39:03.719208Z'
 authors:
 - Juan Manuel Vazquez Diaz

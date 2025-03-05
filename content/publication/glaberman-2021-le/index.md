@@ -2,7 +2,7 @@
 title: Concurrent evolution of antiaging gene duplications and cellular phenotypes
   in long-lived turtles
 date: '2021-12-01'
-draft: true
+draft: false
 publishDate: '2025-03-04T23:39:04.481173Z'
 authors:
 - Scott Glaberman

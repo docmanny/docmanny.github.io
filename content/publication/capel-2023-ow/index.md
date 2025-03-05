@@ -1,7 +1,7 @@
 ---
 title: Reference genome of Townsend’s big-eared bat, Corynorhinus townsendii
 date: '2023-12-01'
-draft: true
+draft: false
 publishDate: '2025-03-04T23:39:05.458296Z'
 authors:
 - Samantha L R Capel

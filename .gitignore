@@ -2,6 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
-public/
+/public/
+/resources/
 # Local Netlify folder
 .netlify
+.DS_Store
+Thumbs.db
+.hugo_build.lock

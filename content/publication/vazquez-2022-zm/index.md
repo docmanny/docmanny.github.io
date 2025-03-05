@@ -2,7 +2,7 @@
 title: Parallel evolution of reduced cancer risk and tumor suppressor duplications
   in Xenarthra
 date: '2022-12-01'
-draft: true
+draft: false
 publishDate: '2025-03-04T23:39:04.813770Z'
 authors:
 - Juan Manuel Vazquez

@@ -2,7 +2,7 @@
 title: Expanding the stdpopsim species catalog, and lessons learned for realistic
   genome simulations
 date: '2023-04-01'
-draft: true
+draft: false
 publishDate: '2025-03-04T23:39:04.924242Z'
 authors:
 - M E Lauterbur

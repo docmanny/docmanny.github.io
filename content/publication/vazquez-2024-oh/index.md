@@ -1,7 +1,7 @@
 ---
 title: Extensive longevity and DNA virus-driven adaptation in nearctic Myotis bats
 date: '2024-10-01'
-draft: true
+draft: false
 publishDate: '2025-03-04T23:39:05.916376Z'
 authors:
 - Juan M Vazquez

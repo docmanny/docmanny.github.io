@@ -1,7 +1,7 @@
 ---
 title: A genome assembly of the Yuma myotis bat, Myotis yumanensis
 date: '2024-02-01'
-draft: true
+draft: false
 publishDate: '2025-03-04T23:39:05.348903Z'
 authors:
 - Joseph N Curti

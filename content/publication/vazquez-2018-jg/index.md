@@ -2,7 +2,7 @@
 title: A zombie LIF gene in elephants is upregulated by TP53 to induce apoptosis in
   response to DNA damage
 date: '2018-08-01'
-draft: true
+draft: false
 publishDate: '2025-03-04T23:39:04.106357Z'
 authors:
 - Juan Manuel Vazquez

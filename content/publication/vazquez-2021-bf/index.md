@@ -2,7 +2,7 @@
 title: Pervasive duplication of tumor suppressors in Afrotherians during the evolution
   of large bodies and reduced cancer risk
 date: '2021-01-01'
-draft: true
+draft: false
 publishDate: '2025-03-04T23:39:04.410466Z'
 authors:
 - Juan M Vazquez

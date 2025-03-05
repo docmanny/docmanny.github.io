@@ -2,7 +2,7 @@
 title: 'Ex vivo and in vitro methods as a platform for studying anthropogenic effects
   on marine mammals: four challenges and how to meet them'
 date: '2024-10-01'
-draft: true
+draft: false
 publishDate: '2025-03-04T23:39:05.852562Z'
 authors:
 - Juan Manuel Vazquez

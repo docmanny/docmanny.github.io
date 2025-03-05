@@ -2,7 +2,7 @@
 title: Sensitivity of primary fibroblasts in culture to atmospheric oxygen does not
   correlate with species lifespan
 date: '2016-05-01'
-draft: true
+draft: false
 publishDate: '2025-03-04T23:39:03.918173Z'
 authors:
 - Alison Patrick

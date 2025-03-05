@@ -2,7 +2,7 @@
 title: Tissue-specific impacts of aging and genetics on gene expression patterns in
   humans
 date: '2022-10-01'
-draft: true
+draft: false
 publishDate: '2025-03-04T23:39:04.650318Z'
 authors:
 - Ryo Yamamoto

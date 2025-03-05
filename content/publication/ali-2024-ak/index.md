@@ -2,7 +2,7 @@
 title: Semen proteome and transcriptome of the endangered black-footed ferret (Mustela
   nigripes) show association with the environment and fertility outcome
 date: '2024-03-01'
-draft: true
+draft: false
 publishDate: '2025-03-04T23:39:05.552409Z'
 authors:
 - Nadya Ali

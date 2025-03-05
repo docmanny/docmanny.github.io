@@ -2,7 +2,7 @@
 title: Hypoxia blunts angiogenic signaling and upregulates the antioxidant system
   in elephant seal endothelial cells
 date: '2023-07-01'
-draft: true
+draft: false
 publishDate: '2025-03-04T23:39:05.046947Z'
 authors:
 - Kaitlin N Allen
